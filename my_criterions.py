@@ -147,13 +147,3 @@ def MannWhitneyTest(x, y, alpha=0.05):
     u = (U - Eu) / np.sqrt(Du)
     crit_u = stats.norm.ppf(1.0 - alpha / 2.0)
     return (np.abs(u) <= crit_u, u, crit_u)
-
-
-# df = pd.read_csv('data_lab3/dep/norm!=1.txt', names=['x', 'dist'], sep=' ')
-# x = np.array([3, 9, 5, 8, 5, 6, 9, 7])
-# y = np.array([5, 4, 5, 9, 6, 10, 3, 8])
-# print(WilcoxonSignedRanksTest(x, y))
-
-# x = np.array([10, 3, 18, -1, 20, 10, 3])
-# y = np.array([15, 7, 0, 10, 25, 9])
-# print(MannWhitneyTest(x, y))
